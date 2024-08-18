@@ -35,18 +35,20 @@ create_or_modify_schema_ini(csv_file, col_classes = NULL)
 
 ### **Example**
 
+```{}
 # Example usage:
 
 # Specify the path to the CSV file
-csv_file <- "your_file.csv"
+csv_file = "your_file.csv"
 
-# Optionally, define column classes
-col_classes <- col_classes = c("GEOID20"="character",
-                               "STATEFP"="character",
-                               "COUNTYFP"="character")
+# Optionally, define column classes:
+# Create a named vector where each name corresponds to a column in your CSV, and each value specifies the data type (e.g., "character", "numeric", "date"):
+col_classes = c("GEOID20"="character",
+                "STATEFP"="character",
+                "COUNTYFP"="character")
 
 # Call the function to create or modify schema.ini
 create_or_modify_schema_ini(csv_file, col_classes)
-
+```
 <br/> 
 
