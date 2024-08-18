@@ -3,19 +3,15 @@
 
 # Function to generate a schema.ini file.
 
-
-# Date Created:        05/02/2024
-# Date Last Modified:  05/01/2023
 # Created by Brittany Antonczak
-# University of Vermont, Burlington, VT
+
 #----------------------------------------------------------------~ 
 
 
 # Description: 
 
-# Function to create or modify a schema.ini file for a given CSV file without 
-# hardcoding column names and types. The schema.ini file generated will be 
-# compatible with reading data into ArcGIS Pro.
+# Function to create or modify a schema.ini file for a given CSV file. 
+# The schema.ini file generated will be compatible with reading data into ArcGIS.
 
 create_or_modify_schema_ini <- function(csv_file, col_classes = NULL) {
   
@@ -106,12 +102,15 @@ create_or_modify_schema_ini <- function(csv_file, col_classes = NULL) {
 # Example usage:
 
 # Specify the path to the CSV file
-#csv_file <- "your_file.csv"
+csv_file = "your_file.csv"
 
-# Optionally, define column classes
-# col_classes <- c("integer", "character", "numeric", ...)  
-# Example: c("integer", "character", "numeric")
+# Optionally, define column classes:
+# Create a named vector where each name corresponds to a column in your CSV, and each value specifies the data type 
+# (e.g., "character", "numeric", "integer"):
+col_classes = c("GEOID20"="character",
+                "STATEFP"="character",
+                "COUNTYFP"="character")
 
 # Call the function to create or modify schema.ini
-#create_or_modify_schema_ini(csv_file)
+create_or_modify_schema_ini(csv_file, col_classes)
 
