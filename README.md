@@ -52,3 +52,6 @@ create_or_modify_schema_ini(csv_file, col_classes)
 ```
 <br/> 
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
