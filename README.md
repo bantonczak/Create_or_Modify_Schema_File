@@ -7,6 +7,7 @@
 
 ## **create_or_modify_schema_ini**
 #### *Function to generate or modify a schema.ini file for ArcGIS*
+#### *Available for R and Python*
 
 ---
 
